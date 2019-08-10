@@ -1,4 +1,8 @@
 #!/bin/sh
 
-docker build --tag=graphexp-original:1.0 original/
-docker build --tag=graphexp-bootstrap:1.0 bootstrap/
+for TYPE in "original" "bootstrap"
+do
+	docker build --tag=graphexp-${TYPE}:1.0 ${TYPE}/
+	docker tag graphexp-${TYPE}:1.0 pbgraff/graphexp-${TYPE}:1.0
+	docker push pbgraff/graphexp-${TYPE}:1.0
+done
