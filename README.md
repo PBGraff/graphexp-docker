@@ -10,12 +10,12 @@ The Docker containers can be built by running `build.sh`.
 Alternatively, they can be downloaded from Docker Hub.
 
 ```
-docker pull pgraff85/graphexp-original:1.0
+docker pull pbgraff/graphexp-original:1.0
 docker run --rm -d -p 8001:80 --name=graphexp pbgraff/graphexp-original:1.0
 ```
 
 ```
-docker pull pgraff85/graphexp-bootstrap:1.0
+docker pull pbgraff/graphexp-bootstrap:1.0
 docker run --rm -d -p 8001:80 --name=graphexp pbgraff/graphexp-bootstrap:1.0
 ```
 
